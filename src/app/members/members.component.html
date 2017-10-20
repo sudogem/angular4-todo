@@ -1,3 +1,12 @@
-<p>
-  members works!
-</p>
+<h1>Item list</h1>
+<div class="addItem">
+  <input [(ngModel)]="newItem" placeholder="Add Item" class="addText">
+  <button (click) = "pushItem()" >Add</button>
+</div>
+
+<ul>
+  <li *ngFor = "let i of items; let idx = index">
+    {{i}}
+    <span (click) = "removeItem(idx)" >x</span>
+  </li>
+</ul>

@@ -12,4 +12,15 @@ export class MembersComponent implements OnInit {
   ngOnInit() {
   }
 
+  items = ["apple", "banana", "camote"];
+  newItem = "";
+  pushItem = () => {
+    if (this.newItem != "") {
+      this.items.push(this.newItem);
+      this.newItem = "";
+    }
+  }
+  removeItem = (index) => {
+    this.items.splice(index, 1);
+  }
 }

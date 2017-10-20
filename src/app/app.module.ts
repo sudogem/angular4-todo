@@ -17,7 +17,16 @@ import { MembersComponent } from './members/members.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule
+    RouterModule.forRoot([
+      {
+        path: 'member',
+        component: MembersComponent
+      },
+      {
+        path: 'product',
+        component: ProductComponent
+      }
+    ])
   ],
   providers: [MyDataService],
   bootstrap: [AppComponent]
