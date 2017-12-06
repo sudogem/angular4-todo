@@ -19,6 +19,10 @@ import { MembersComponent } from './members/members.component';
     FormsModule,
     RouterModule.forRoot([
       {
+        path: '',
+        component: MembersComponent
+      },
+      {
         path: 'member',
         component: MembersComponent
       },
